@@ -9,8 +9,12 @@ namespace NorthDallas.Contacts
     {
         public App()
         {
-            InitializeComponent();
+            // Initialize Live Reload.
+#if DEBUG
+            LiveReload.Init();
+#endif
 
+            InitializeComponent();
             MainPage = new MainPage();
         }
 
