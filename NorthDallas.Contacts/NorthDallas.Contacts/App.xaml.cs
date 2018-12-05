@@ -16,7 +16,7 @@ namespace NorthDallas.Contacts
 #endif
 
             InitializeComponent();
-            MainPage = new ContactListView();
+            MainPage = new NavigationPage(new ContactListView());
         }
 
         protected override void OnStart()

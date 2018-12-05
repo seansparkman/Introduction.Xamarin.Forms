@@ -1,4 +1,5 @@
-﻿using NorthDallas.Contacts.Services;
+﻿using NorthDallas.Contacts.Models;
+using NorthDallas.Contacts.Services;
 using NorthDallas.Contacts.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,16 @@ namespace NorthDallas.Contacts.Views
             base.OnAppearing();
 
             _viewModel.RefreshCommand.Execute(null);
+        }
+
+        private void OnContactSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem is Result)
+            {
+                Navigation.PushAsync(new ContactDetailView(new ContactDetailViewModel((Result)e.SelectedItem)));
+                var listView = (ListView)sender;
+                listView.SelectedItem = null;
+            }
         }
     }
 }

@@ -7,7 +7,8 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView ItemsSource="{Binding Contacts}"
-		              RowHeight="70">
+		              RowHeight="70"
+                      ItemSelected="OnContactSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
