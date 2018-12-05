@@ -8,7 +8,28 @@
 		              RowHeight="70">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding name.first}" Detail="{Binding name.last}" />
+                        <ViewCell>
+                            <StackLayout Margin="10">
+                                <Label FontAttributes="Bold">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding name.last}" />
+                                            <Span Text=", " />
+                                            <Span Text="{Binding name.first}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding location.city}" />
+                                            <Span Text=", " />
+                                            <Span Text="{Binding location.state}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
