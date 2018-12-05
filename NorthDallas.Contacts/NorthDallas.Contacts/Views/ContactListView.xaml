@@ -8,7 +8,7 @@
 		              RowHeight="70">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding .}" />
+                        <TextCell Text="{Binding name.first}" Detail="{Binding name.last}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

@@ -1,4 +1,5 @@
-﻿using NorthDallas.Contacts.ViewModels;
+﻿using NorthDallas.Contacts.Services;
+using NorthDallas.Contacts.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,18 @@ namespace NorthDallas.Contacts.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ContactListView : ContentPage
 	{
-		public ContactListView ()
+        private ContactListViewModel _viewModel;
+        public ContactListView ()
 		{
-            BindingContext = new ContactListViewModel();
+            BindingContext = _viewModel = new ContactListViewModel(new UserService());
             InitializeComponent ();
 		}
-	}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            _viewModel.RefreshCommand.Execute(null);
+        }
+    }
 }
