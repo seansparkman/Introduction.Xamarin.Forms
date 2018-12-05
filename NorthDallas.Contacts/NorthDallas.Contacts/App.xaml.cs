@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NorthDallas.Contacts.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,7 +16,7 @@ namespace NorthDallas.Contacts
 #endif
 
             InitializeComponent();
-            MainPage = new MainPage();
+            MainPage = new ContactListView();
         }
 
         protected override void OnStart()
