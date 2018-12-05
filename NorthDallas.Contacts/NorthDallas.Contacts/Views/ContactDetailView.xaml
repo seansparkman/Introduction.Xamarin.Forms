@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:tranformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="NorthDallas.Contacts.Views.ContactDetailView"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <ffimage:CachedImage Grid.Row="0"
+                                     VerticalOptions="FillAndExpand"
+                                     HorizontalOptions="FillAndExpand"
+                                     Source="{Binding Contact.picture.large}"
+                                     LoadingPlaceholder="http://placekitten.com/300/300"
+                                     Margin="50, 0, 50, 0">
+                    <ffimage:CachedImage.Transformations>
+                        <tranformations:CircleTransformation />
+                    </ffimage:CachedImage.Transformations>
+                </ffimage:CachedImage>
+                <StackLayout Grid.Row="1" Margin="10, 0, 10, 0">
+                    <Label FontSize="Micro">Name:</Label>
+                    <Label FontAttributes="Bold"
+                           FontSize="Large">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding Contact.name.last}" />
+                                <Span Text=", " />
+                                <Span Text="{Binding Contact.name.first}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Micro">Location:</Label>
+                    <Label FontAttributes="Bold"
+                           FontSize="Large">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding Contact.location.city}" />
+                                <Span Text=", " />
+                                <Span Text="{Binding Contact.location.state}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="Micro">Email:</Label>
+                    <Label FontAttributes="Bold"
+                           FontSize="Large"
+                           Text="{Binding Contact.email}"/>
+                    <Label FontSize="Micro">Phone:</Label>
+                    <Label FontAttributes="Bold"
+                           FontSize="Large"
+                           Text="{Binding Contact.phone}"/>
+                    <Label FontSize="Micro">Cell:</Label>
+                    <Label FontAttributes="Bold"
+                           FontSize="Large"
+                           Text="{Binding Contact.cell}"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
