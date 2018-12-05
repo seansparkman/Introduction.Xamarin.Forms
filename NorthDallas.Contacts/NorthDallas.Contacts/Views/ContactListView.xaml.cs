@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NorthDallas.Contacts.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,8 @@ namespace NorthDallas.Contacts.Views
 	{
 		public ContactListView ()
 		{
-			InitializeComponent ();
+            BindingContext = new ContactListViewModel();
+            InitializeComponent ();
 		}
 	}
 }
