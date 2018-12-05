@@ -24,6 +24,7 @@
                                                      Grid.Column="0"
                                                      WidthRequest="300"
                                                      HeightRequest="300"
+                                                     LoadingPlaceholder="http://placekitten.com/300/300"
                                                      Source="{Binding picture.large}"/>
 
                                 <StackLayout Grid.Row="0"
