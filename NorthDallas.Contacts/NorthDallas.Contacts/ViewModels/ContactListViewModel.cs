@@ -10,7 +10,20 @@ namespace NorthDallas.Contacts.ViewModels
     {
         public ContactListViewModel()
         {
-            Title = "Welcome to the Contact List";
+            Contacts.AddRange(new string[]
+            {
+                "Sean",
+                "Homero",
+                "Gabrielle",
+                "Anna",
+                "Annette",
+                "Bella",
+                "Brett",
+                "Stephen"
+            });
         }
+
+        public ObservableRangeCollection<string> Contacts { get; set; } =
+            new ObservableRangeCollection<string>();
     }
 }
