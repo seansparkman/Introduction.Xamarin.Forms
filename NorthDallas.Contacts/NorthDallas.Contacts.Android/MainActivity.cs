@@ -14,6 +14,9 @@ namespace NorthDallas.Contacts.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
