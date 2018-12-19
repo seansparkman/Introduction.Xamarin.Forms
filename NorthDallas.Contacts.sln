@@ -9,7 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthDallas.Contacts.iOS", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthDallas.Contacts.UWP", "NorthDallas.Contacts\NorthDallas.Contacts.UWP\NorthDallas.Contacts.UWP.csproj", "{440536D1-BC26-4AB0-8879-B5F07ECC240D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthDallas.Contacts", "NorthDallas.Contacts\NorthDallas.Contacts\NorthDallas.Contacts.csproj", "{EF685F0D-5760-4449-BAB8-F220AFAAC64B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthDallas.Contacts", "NorthDallas.Contacts\NorthDallas.Contacts\NorthDallas.Contacts.csproj", "{EF685F0D-5760-4449-BAB8-F220AFAAC64B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72553B84-1127-4988-A14C-04BFAD09A43B}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
