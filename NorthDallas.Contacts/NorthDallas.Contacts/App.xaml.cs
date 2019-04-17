@@ -10,11 +10,6 @@ namespace NorthDallas.Contacts
     {
         public App()
         {
-            // Initialize Live Reload.
-#if DEBUG
-            LiveReload.Init();
-#endif
-
             InitializeComponent();
             MainPage = new NavigationPage(new ContactListView());
         }
